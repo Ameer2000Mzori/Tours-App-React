@@ -18,7 +18,7 @@
 
 # 📖 About This Project <a name="about-project"></a>
 
-> Real Estate Website is a website created with the MERN stack. With additional npm packages, you can create an account, delete an account, post a house for sale or rent, add favorites, remove favorites, and search for houses. Download the project for a demo test.
+> Tours-App-React is a project created with React and styled with Tailwind CSS. It uses an API to fetch data, and Axios is utilized for the API fetching. This project serves as a means for me to learn new concepts in React. Please check out the sample images or download the project for a better understanding.
 
 # Sample Of Website <a name="Sample-Of-Website"></a>
 
@@ -36,11 +36,8 @@
   <li><a href="https://tailwindcss.com/">Tailwindcss</a></li>
   <li><a href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a></li>
   <li><a href="https://react.dev/">React</a></li>
-  <li><a href="https://nodejs.org/en">Nodejs</a></li>
-  <li><a href="https://expressjs.com/">Expressjs</a></li>
-  <li><a href="https://www.mongodb.com/">Mongodb</a></li>
  <li><a href="https://prettier.io/">Prettier</a></li>
-  <li><a href="https://eslint.org/">Eslint</a></li>
+  <li><a href="https://axios-http.com/docs/intro">Axios</a></li>
   </ul>
 </details>
 
@@ -53,17 +50,8 @@
 - **[TAILWIND ]**
 - **[JAVASCRIPT ]**
 - **[REACT ]**
-
-- **[BACKEND ]**
-- **[NODE.JS ]**
-- **[EXPRESS.JS ]**
-- **[MANGO.DB ]**
-
-- **[TOOLS ]**
-- **[ESLINT ]**
+- **[AXIOS ]**
 - **[PRETTIER ]**
-
-- **[AND MORE ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
