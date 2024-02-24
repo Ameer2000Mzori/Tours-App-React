@@ -1,7 +1,8 @@
 import React from 'react'
+import Card from './Card.jsx'
 
 const Cards = () => {
-  return <div>Card</div>
+  return <Card />
 }
 
 export default Cards
