@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useCardData } from './API.jsx' // Adjust the import path as necessary
 
 const Card = () => {
@@ -23,6 +23,14 @@ const Card = () => {
 
   return (
     <div>
+      <button
+        onClick={() => {
+          setTourData(data)
+        }}
+      >
+        {' '}
+        rest{' '}
+      </button>
       <div>
         {tourData.map((info) => {
           return (
