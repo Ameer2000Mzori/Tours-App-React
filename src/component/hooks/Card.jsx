@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useCardData } from './API.jsx' // Adjust the import path as necessary
-
+import RemoveTour from './RemoveTour.js'
 const Card = () => {
   const { data, error, loading } = useCardData()
   const [tourData, setTourData] = useState([])
@@ -13,11 +13,6 @@ const Card = () => {
     }
   }, [data])
 
-  const removeTour = (id) => {
-    const newTours = tourData.filter((tour) => tour.id !== id)
-    setTourData(newTours)
-  }
-
   if (loading) return <div>Loading...</div>
   if (error) return <div>Error...</div>
 
@@ -28,8 +23,7 @@ const Card = () => {
           setTourData(data)
         }}
       >
-        {' '}
-        rest{' '}
+        rest
       </button>
       <div>
         {tourData.map((info) => {
@@ -40,7 +34,7 @@ const Card = () => {
               <p>{info.info}</p>
               <button
                 onClick={() => {
-                  removeTour(info.id)
+                  RemoveTour(info.id, tourData, setTourData)
                 }}
               >
                 remove
