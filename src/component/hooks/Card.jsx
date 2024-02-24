@@ -13,18 +13,30 @@ const Card = () => {
     }
   }, [data])
 
+  const removeTour = (id) => {
+    const newTours = tourData.filter((tour) => tour.id !== id)
+    setTourData(newTours)
+  }
+
   if (loading) return <div>Loading...</div>
   if (error) return <div>Error...</div>
 
   return (
-    <div className="card">
-      <div className="card-body">
+    <div>
+      <div>
         {tourData.map((info) => {
           return (
             <div key={info.id}>
               <img src={info.image} alt="" />
               <h3>{info.name}</h3>
               <p>{info.info}</p>
+              <button
+                onClick={() => {
+                  removeTour(info.id)
+                }}
+              >
+                remove
+              </button>
             </div>
           )
         })}
