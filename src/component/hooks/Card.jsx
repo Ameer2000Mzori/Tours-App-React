@@ -5,7 +5,7 @@ const Card = () => {
   const { data, error, loading } = useCardData()
   const [tourData, setTourData] = useState([])
 
-  // using effect to first wait for data then show the tours data
+  // first wait if data is then loaded it
   useEffect(() => {
     if (data) {
       // Ensure data is not null or undefined
@@ -13,9 +13,11 @@ const Card = () => {
     }
   }, [data])
 
+  // loading or error returns
   if (loading) return <div>Loading...</div>
   if (error) return <div>Error...</div>
 
+  // our app logic
   return (
     <div>
       <button
