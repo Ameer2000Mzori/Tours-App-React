@@ -1,6 +1,6 @@
-import Cards from './hooks/Cards.jsx'
+import Card from './hooks/Card.jsx'
 const Home = () => {
-  return <Cards />
+  return <Card />
 }
 
 export default Home
