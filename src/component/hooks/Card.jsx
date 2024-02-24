@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useCardData } from './API.jsx' // Adjust the import path as necessary
 
 const Card = () => {
   const { data, error, loading } = useCardData()
+  const [tourData, setTourData] = useState([])
+
+  // using effect to first wait for data then show the tours data
+  useEffect(() => {
+    if (data) {
+      // Ensure data is not null or undefined
+      setTourData(data)
+    }
+  }, [data])
 
   if (loading) return <div>Loading...</div>
   if (error) return <div>Error...</div>
@@ -10,7 +19,7 @@ const Card = () => {
   return (
     <div className="card">
       <div className="card-body">
-        {data.map((info) => {
+        {tourData.map((info) => {
           return (
             <div key={info.id}>
               <img src={info.image} alt="" />
